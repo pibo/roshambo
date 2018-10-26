@@ -1,5 +1,5 @@
 //
-//  MatchResultsViewController.swift
+//  MatchResultViewController.swift
 //  Roshambo
 //
 //  Created by Felipe Ribeiro on 26/09/2018.
@@ -10,57 +10,64 @@ import UIKit
 
 class MatchResultViewController: UIViewController {
     
-    var result: MatchResult?
+    // MARK: Properties
     
-    // MARK: outlets
-    @IBOutlet var resultLabel: UILabel!
-    @IBOutlet var playerMoveImage: UIImageView!
-    @IBOutlet var opponentMoveImage: UIImageView!
-    @IBOutlet var resultMoveImage: UIImageView!
-    @IBOutlet var resultMoveLabel: UILabel!
+    var match: Match!
     
-    // MARK: outlets to animate
+    let resultImages: [Move?: UIImage] = [
+        .rock: UIImage(named: "RockCrushesScissors")!,
+        .paper: UIImage(named: "PaperCoversRock")!,
+        .scissors: UIImage(named: "ScissorsCutPaper")!,
+        nil: UIImage(named: "itsATie")!
+    ]
+    
+    let verbs: [Move?: String] = [
+        .rock: "crushes",
+        .paper: "covers",
+        .scissors: "cut"
+    ]
+    
+    // MARK: Outlets
+    
+    @IBOutlet var resultTitle: UILabel!
+    @IBOutlet var playerMoveImageView: UIImageView!
+    @IBOutlet var opponentMoveImageView: UIImageView!
+    @IBOutlet var resultImageView: UIImageView!
+    @IBOutlet var resultDescription: UILabel!
+    
+    // MARK: Outlets To Animate
+    
     @IBOutlet var movesContainer: UIStackView!
     @IBOutlet var resultContainer: UIStackView!
     @IBOutlet var playAgainButton: UIButton!
     
-    // MARK: actions
-    @IBAction func tappedPlayAgain(_ sender: UIButton) {
+    // MARK: Actions
+    @IBAction func playAgain(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
-    // MARK: life-cycle methods
+    // MARK: Life Cycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let result = result {
+        if let match = self.match {
             
-            // Set the main result label based on the result.
-            if result.drew {
-                resultLabel.text = "Draw!"
+            // Set the result title.
+            if let winner = match.winner {
+                resultTitle.text = winner == match.playerMove ? "You Win!" : "You Lose!"
             } else {
-                resultLabel.text = result.playerWon ? "You win!" : "You lose!"
+                resultTitle.text = "Draw!"
             }
             
-            // Set move images.
-            playerMoveImage.image = UIImage(named: result.playerMove.rawValue)
-            opponentMoveImage.image = UIImage(named: result.opponentMove.rawValue)
+            // Set the move image views.
+            playerMoveImageView.image = match.playerMove.image
+            opponentMoveImageView.image = match.opponentMove.image
             
-            // Set the result move label and image.
-            switch (result.playerMove, result.opponentMove) {
-            case (.paper, .rock), (.rock, .paper):
-                resultMoveImage.image = UIImage(named: "PaperCoversRock")
-                resultMoveLabel.text = "Paper covers rock"
-            case (.scissors, .paper), (.paper, .scissors):
-                resultMoveImage.image = UIImage(named: "ScissorsCutPaper")
-                resultMoveLabel.text = "Scissors cut paper"
-            case (.rock, .scissors), (.scissors, .rock):
-                resultMoveImage.image = UIImage(named: "RockCrushesScissors")
-                resultMoveLabel.text = "Rock crushes scissors"
-            default:
-                resultMoveImage.image = UIImage(named: "itsATie")
-                resultMoveLabel.text = "At least you got a match!"
-            }
+            // Set the result image view and description.
+            resultImageView.image = resultImages[match.winner]
+            resultDescription.text = match.winner != nil
+                ? "\(match.winner!.rawValue.capitalized) \(verbs[match.winner]!) \(match.loser!.rawValue)!"
+                : "At least you got a match!"
         }
         
         // Hide elements to show with animation.

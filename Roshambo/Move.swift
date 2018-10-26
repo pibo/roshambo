@@ -7,19 +7,25 @@
 //
 
 import Foundation
+import UIKit
 
-enum Move: String {
+enum Move: String, CaseIterable {
     case rock, paper, scissors
     
+    var image: UIImage! {
+        return UIImage(named: rawValue)
+    }
+    
     static func random() -> Move! {
-        let options = ["rock", "paper", "scissors"]
-        
-        // Swift 4.1
-        // let randomElement = options[Int(arc4random_uniform(UInt32(options.count)))]
-        
-        // Swift 4.2
-        let randomElement: String! = options.randomElement()
-        
-        return Move(rawValue: randomElement)
+        return Move.allCases.randomElement()
+    }
+    
+    func defeats(_ opponent: Move) -> Bool {
+        switch (self, opponent) {
+        case (.rock, .scissors), (.scissors, .paper), (.paper, .rock):
+            return true
+        default:
+            return false
+        }
     }
 }

@@ -8,25 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		9823342A215BCCE400250072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98233429215BCCE400250072 /* AppDelegate.swift */; };
-		9823342C215BCCE400250072 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823342B215BCCE400250072 /* MatchViewController.swift */; };
+		9823342C215BCCE400250072 /* NewMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823342B215BCCE400250072 /* NewMatchViewController.swift */; };
 		9823342F215BCCE400250072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9823342D215BCCE400250072 /* Main.storyboard */; };
 		98233431215BCCE600250072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98233430215BCCE600250072 /* Assets.xcassets */; };
 		98233434215BCCE600250072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98233432215BCCE600250072 /* LaunchScreen.storyboard */; };
 		9823343C215BCE8700250072 /* MatchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823343B215BCE8700250072 /* MatchResultViewController.swift */; };
-		987826BF215D1616003F1391 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987826BE215D1616003F1391 /* MatchResult.swift */; };
+		987826BF215D1616003F1391 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987826BE215D1616003F1391 /* Match.swift */; };
 		987826C1215D18A3003F1391 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987826C0215D18A3003F1391 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		98233426215BCCE400250072 /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98233429215BCCE400250072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9823342B215BCCE400250072 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		9823342B215BCCE400250072 /* NewMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchViewController.swift; sourceTree = "<group>"; };
 		9823342E215BCCE400250072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98233430215BCCE600250072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98233433215BCCE600250072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98233435215BCCE600250072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9823343B215BCE8700250072 /* MatchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResultViewController.swift; sourceTree = "<group>"; };
-		987826BE215D1616003F1391 /* MatchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
+		987826BE215D1616003F1391 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		987826C0215D18A3003F1391 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,10 +60,9 @@
 		98233428215BCCE400250072 /* Roshambo */ = {
 			isa = PBXGroup;
 			children = (
+				989A55BE218354AB00104DAF /* Models */,
 				98233429215BCCE400250072 /* AppDelegate.swift */,
-				987826BE215D1616003F1391 /* MatchResult.swift */,
-				987826C0215D18A3003F1391 /* Move.swift */,
-				9823342B215BCCE400250072 /* MatchViewController.swift */,
+				9823342B215BCCE400250072 /* NewMatchViewController.swift */,
 				9823343B215BCE8700250072 /* MatchResultViewController.swift */,
 				9823342D215BCCE400250072 /* Main.storyboard */,
 				98233430215BCCE600250072 /* Assets.xcassets */,
@@ -71,6 +70,15 @@
 				98233435215BCCE600250072 /* Info.plist */,
 			);
 			path = Roshambo;
+			sourceTree = "<group>";
+		};
+		989A55BE218354AB00104DAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				987826BE215D1616003F1391 /* Match.swift */,
+				987826C0215D18A3003F1391 /* Move.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +113,7 @@
 				TargetAttributes = {
 					98233425215BCCE400250072 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -145,8 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				987826C1215D18A3003F1391 /* Move.swift in Sources */,
-				987826BF215D1616003F1391 /* MatchResult.swift in Sources */,
-				9823342C215BCCE400250072 /* MatchViewController.swift in Sources */,
+				987826BF215D1616003F1391 /* Match.swift in Sources */,
+				9823342C215BCCE400250072 /* NewMatchViewController.swift in Sources */,
 				9823342A215BCCE400250072 /* AppDelegate.swift in Sources */,
 				9823343C215BCE8700250072 /* MatchResultViewController.swift in Sources */,
 			);
@@ -300,7 +309,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = feliperibeiro.Roshambo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -317,7 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = feliperibeiro.Roshambo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

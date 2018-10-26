@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Match View Controller-->
+        <!--New Match View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MatchViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewMatchViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="imageView.contentMode" value="1"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="rockTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwE-YD-J9S"/>
+                                                    <action selector="chooseMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zcQ-hO-Aof"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etz-bI-hBR" userLabel="Paper Button">
@@ -82,7 +82,7 @@
                                                 </constraints>
                                                 <state key="normal" image="paper"/>
                                                 <connections>
-                                                    <action selector="paperTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBa-lt-gf7"/>
+                                                    <action selector="chooseMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DHY-NS-qCN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyN-XV-VEV" userLabel="Scissors Button">
@@ -97,7 +97,8 @@
                                                 </constraints>
                                                 <state key="normal" image="scissors"/>
                                                 <connections>
-                                                    <segue destination="DaY-lc-yyN" kind="presentation" identifier="showResults" id="3Gk-Hf-j4a"/>
+                                                    <action selector="chooseMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpd-rP-LfH"/>
+                                                    <segue destination="DaY-lc-yyN" kind="presentation" identifier="goToMatchResult" id="3Gk-Hf-j4a"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -112,6 +113,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="paperButton" destination="etz-bI-hBR" id="Ulw-dN-286"/>
+                        <outlet property="rockButton" destination="O19-tp-pFf" id="00e-tp-I7P"/>
+                        <outlet property="scissorsButton" destination="JyN-XV-VEV" id="qz8-Pt-Tf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,7 +149,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S7M-yz-OYA" userLabel="Player Move">
                                                 <rect key="frame" x="0.0" y="0.0" width="79.5" height="93.5"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-LX-ngx" userLabel="Player Move Image">
+                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-LX-ngx" userLabel="Player Move Image View">
                                                         <rect key="frame" x="2.5" y="0.0" width="75" height="65"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You chose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV4-HV-ySj">
@@ -157,7 +163,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iuv-D6-B3c" userLabel="Opponent Move">
                                                 <rect key="frame" x="143.5" y="0.0" width="127.5" height="93.5"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="J6y-We-XrO" userLabel="Opponent Move Image">
+                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="J6y-We-XrO" userLabel="Opponent Move Image View">
                                                         <rect key="frame" x="26.5" y="0.0" width="75" height="65"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent chose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GX3-SV-lUz">
@@ -173,7 +179,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="20p-MM-b4f" userLabel="Result">
                                         <rect key="frame" x="55.5" y="247" width="160" height="148.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperCoversRock" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-Pd-JjO" userLabel="Play Image">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperCoversRock" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-Pd-JjO" userLabel="Result Image View">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="AIa-oL-2Rs"/>
@@ -195,7 +201,7 @@
                                         <rect key="frame" x="100.5" y="443.5" width="70" height="30"/>
                                         <state key="normal" title="Play again"/>
                                         <connections>
-                                            <action selector="tappedPlayAgain:" destination="DaY-lc-yyN" eventType="touchUpInside" id="yqE-HE-luw"/>
+                                            <action selector="playAgain:" destination="DaY-lc-yyN" eventType="touchUpInside" id="lxb-pG-vX4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -209,14 +215,14 @@
                         <viewLayoutGuide key="safeArea" id="H9B-wz-9ow"/>
                     </view>
                     <connections>
-                        <outlet property="movesContainer" destination="q5v-Aa-Xvz" id="9mL-mi-aAK"/>
-                        <outlet property="opponentMoveImage" destination="J6y-We-XrO" id="9zO-Zl-A06"/>
-                        <outlet property="playAgainButton" destination="7jD-ay-BQP" id="imA-CX-OnH"/>
-                        <outlet property="playerMoveImage" destination="LaJ-LX-ngx" id="Wwc-XE-RJf"/>
-                        <outlet property="resultContainer" destination="20p-MM-b4f" id="jDY-Ei-FKp"/>
-                        <outlet property="resultLabel" destination="cTc-Gn-fe5" id="S9V-28-WdO"/>
-                        <outlet property="resultMoveImage" destination="KE7-Pd-JjO" id="SSK-xi-uEu"/>
-                        <outlet property="resultMoveLabel" destination="nzS-UW-bgM" id="KSG-rg-zrg"/>
+                        <outlet property="movesContainer" destination="q5v-Aa-Xvz" id="XUL-Lk-5jY"/>
+                        <outlet property="opponentMoveImageView" destination="J6y-We-XrO" id="sjK-Aw-BIu"/>
+                        <outlet property="playAgainButton" destination="7jD-ay-BQP" id="8P1-oI-2DW"/>
+                        <outlet property="playerMoveImageView" destination="LaJ-LX-ngx" id="3PX-Kh-Ezh"/>
+                        <outlet property="resultContainer" destination="20p-MM-b4f" id="oe0-hU-ves"/>
+                        <outlet property="resultDescription" destination="nzS-UW-bgM" id="9xx-iI-Lvx"/>
+                        <outlet property="resultImageView" destination="KE7-Pd-JjO" id="p6w-eZ-KDL"/>
+                        <outlet property="resultTitle" destination="cTc-Gn-fe5" id="9Eb-EJ-vBx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sc8-r2-3NT" userLabel="First Responder" sceneMemberID="firstResponder"/>
