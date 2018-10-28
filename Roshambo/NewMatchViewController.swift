@@ -12,7 +12,8 @@ class NewMatchViewController: UIViewController {
     
     // MARK: Properties
     
-    var match: Match?
+    var match: Match!
+    var history = [Match]()
 
     // MARK: Outlets
     
@@ -26,14 +27,21 @@ class NewMatchViewController: UIViewController {
         switch sender {
         case rockButton:
             match = Match(playerMove: .rock)
+            history.append(match)
+            
             let controller = storyboard?.instantiateViewController(withIdentifier: "MatchResultViewController") as! MatchResultViewController
             controller.match = match
             present(controller, animated: true, completion: nil)
+            
         case paperButton:
             match = Match(playerMove: .paper)
+            history.append(match)
             performSegue(withIdentifier: "goToMatchResult", sender: self)
+            
         case scissorsButton:
             match = Match(playerMove: .scissors)
+            history.append(match)
+            
         default:
             assert(false, "Unknown button called chooseMove!")
         }
@@ -42,7 +50,12 @@ class NewMatchViewController: UIViewController {
     // MARK: Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! MatchResultViewController
-        controller.match = match
+        if segue.identifier == "goToMatchResult" {
+            let controller = segue.destination as! MatchResultViewController
+            controller.match = match
+        } else if segue.identifier == "goToMatchHistory" {
+            let controller = segue.destination as! MatchHistoryViewController
+            controller.history = history
+        }
     }
 }

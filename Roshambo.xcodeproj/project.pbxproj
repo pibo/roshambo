@@ -15,6 +15,8 @@
 		9823343C215BCE8700250072 /* MatchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9823343B215BCE8700250072 /* MatchResultViewController.swift */; };
 		987826BF215D1616003F1391 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987826BE215D1616003F1391 /* Match.swift */; };
 		987826C1215D18A3003F1391 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987826C0215D18A3003F1391 /* Move.swift */; };
+		989855B021853E57008F87DA /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989855AF21853E57008F87DA /* MatchHistoryViewController.swift */; };
+		989855B2218557EF008F87DA /* MatchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989855B1218557EF008F87DA /* MatchHistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		9823343B215BCE8700250072 /* MatchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResultViewController.swift; sourceTree = "<group>"; };
 		987826BE215D1616003F1391 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		987826C0215D18A3003F1391 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		989855AF21853E57008F87DA /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
+		989855B1218557EF008F87DA /* MatchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				98233429215BCCE400250072 /* AppDelegate.swift */,
 				9823342B215BCCE400250072 /* NewMatchViewController.swift */,
 				9823343B215BCE8700250072 /* MatchResultViewController.swift */,
+				989855AF21853E57008F87DA /* MatchHistoryViewController.swift */,
+				989855B1218557EF008F87DA /* MatchHistoryTableViewCell.swift */,
 				9823342D215BCCE400250072 /* Main.storyboard */,
 				98233430215BCCE600250072 /* Assets.xcassets */,
 				98233432215BCCE600250072 /* LaunchScreen.storyboard */,
@@ -157,6 +163,8 @@
 				987826BF215D1616003F1391 /* Match.swift in Sources */,
 				9823342C215BCCE400250072 /* NewMatchViewController.swift in Sources */,
 				9823342A215BCCE400250072 /* AppDelegate.swift in Sources */,
+				989855B021853E57008F87DA /* MatchHistoryViewController.swift in Sources */,
+				989855B2218557EF008F87DA /* MatchHistoryTableViewCell.swift in Sources */,
 				9823343C215BCE8700250072 /* MatchResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

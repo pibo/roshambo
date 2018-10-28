@@ -14,7 +14,7 @@ No desenvolvimento deste app foram aprendidos os seguintes conceitos:
 
 ### Changelog
 
-#### 1.1
+#### v1.1
 
 Refatoração e enorme simplificação no código, após analisar a solução com model da Udacity:
 
@@ -36,3 +36,9 @@ Refatoração e enorme simplificação no código, após analisar a solução co
     * Atualizar o título é simples, pois basta verificar se há um vencedor e se este foi o usuário
     * Atualizar as imagens do `Move` do usuário e do oponente são simples, já que a imagem fica no próprio enum
     * Para escrever a frase e obter a imagem do match, usa-se dicionários usando o vencedor como key
+
+#### v2.0
+
+* Adicionado uma propriedade `history` no `NewMatchViewController` que mantém todas as partidas feitas pelo usuário
+* Um novo ViewController, `MatchHistoryViewController` exibe o histórico utilizando um `UITableView`
+* Foi criada uma classe filha do `UITableViewCell` com layout personalizado para exibição do histórico
