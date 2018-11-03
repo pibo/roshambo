@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -142,64 +142,82 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MatchHistoryTableViewCell" rowHeight="175" id="Zhx-OV-mih" customClass="MatchHistoryTableViewCell" customModule="Roshambo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="175"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MatchHistoryTableViewCell" rowHeight="225" id="Zhx-OV-mih" customClass="MatchHistoryTableViewCell" customModule="Roshambo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zhx-OV-mih" id="9ta-pl-r5c">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-Ng-9Js">
-                                                    <rect key="frame" x="139.5" y="16" width="96.5" height="29"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Q7y-1m-1hP" userLabel="Moves">
-                                                    <rect key="frame" x="76" y="61" width="223" height="97.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CAL-0j-SlN">
+                                                    <rect key="frame" x="31" y="27" width="313" height="171"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rc9-jI-5qi" userLabel="Player Move">
-                                                            <rect key="frame" x="0.0" y="2" width="79.5" height="93.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You Win!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-Ng-9Js">
+                                                            <rect key="frame" x="100.5" y="0.0" width="112" height="28.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Q7y-1m-1hP" userLabel="Moves">
+                                                            <rect key="frame" x="45" y="44.5" width="223" height="93.5"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="IpJ-wN-d2C" userLabel="Player Move Image View">
-                                                                    <rect key="frame" x="2.5" y="0.0" width="75" height="65"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="You chose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HJ-CD-c1w">
-                                                                    <rect key="frame" x="0.0" y="73" width="79.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rc9-jI-5qi" userLabel="Player Move">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="79.5" height="93.5"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="IpJ-wN-d2C" userLabel="Player Move Image View">
+                                                                            <rect key="frame" x="2.5" y="0.0" width="75" height="65"/>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="You chose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HJ-CD-c1w">
+                                                                            <rect key="frame" x="0.0" y="73" width="79.5" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iNJ-kH-wD6" userLabel="Opponent Move">
+                                                                    <rect key="frame" x="95.5" y="0.0" width="127.5" height="93.5"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="N4P-zG-rOm" userLabel="Opponent Move Image View">
+                                                                            <rect key="frame" x="26.5" y="0.0" width="75" height="65"/>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent chose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYw-Sk-dfI">
+                                                                            <rect key="frame" x="0.0" y="73" width="127.5" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iNJ-kH-wD6" userLabel="Opponent Move">
-                                                            <rect key="frame" x="95.5" y="2" width="127.5" height="93.5"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="N4P-zG-rOm" userLabel="Opponent Move Image View">
-                                                                    <rect key="frame" x="26.5" y="0.0" width="75" height="65"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent chose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYw-Sk-dfI">
-                                                                    <rect key="frame" x="0.0" y="73" width="127.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOB-Oh-4gs" userLabel="Result Date">
+                                                            <rect key="frame" x="125" y="154" width="63.5" height="17"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Played at:">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="14" name=".AppleSystemUIFontItalic"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="PAP-Ng-9Js" firstAttribute="centerX" secondItem="9ta-pl-r5c" secondAttribute="centerX" id="23t-TE-b7V"/>
-                                                <constraint firstItem="Q7y-1m-1hP" firstAttribute="top" secondItem="PAP-Ng-9Js" secondAttribute="bottom" constant="16" id="LoD-z9-e6S"/>
-                                                <constraint firstItem="Q7y-1m-1hP" firstAttribute="centerX" secondItem="9ta-pl-r5c" secondAttribute="centerX" id="Nqd-5y-ELN"/>
-                                                <constraint firstItem="Q7y-1m-1hP" firstAttribute="bottom" secondItem="9ta-pl-r5c" secondAttribute="bottom" constant="-16" id="TeU-Ak-GE9"/>
-                                                <constraint firstItem="PAP-Ng-9Js" firstAttribute="top" secondItem="9ta-pl-r5c" secondAttribute="top" constant="16" id="VOf-tn-NEG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CAL-0j-SlN" secondAttribute="trailing" constant="16" id="81I-U4-rRp"/>
+                                                <constraint firstItem="CAL-0j-SlN" firstAttribute="leading" secondItem="9ta-pl-r5c" secondAttribute="leadingMargin" constant="16" id="m5X-aL-Ogq"/>
+                                                <constraint firstItem="CAL-0j-SlN" firstAttribute="top" secondItem="9ta-pl-r5c" secondAttribute="topMargin" constant="16" id="njS-RI-KxA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CAL-0j-SlN" secondAttribute="bottom" constant="16" id="xF3-Xe-bCl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="opponentMoveImageView" destination="N4P-zG-rOm" id="mir-z4-Qeb"/>
                                             <outlet property="playerMoveImageView" destination="IpJ-wN-d2C" id="ns7-tW-oyV"/>
+                                            <outlet property="resultDate" destination="LOB-Oh-4gs" id="6M1-pN-mFA"/>
                                             <outlet property="resultTitle" destination="PAP-Ng-9Js" id="JkU-ID-FO9"/>
                                         </connections>
                                     </tableViewCell>
@@ -351,7 +369,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="20p-MM-b4f" userLabel="Result">
                                         <rect key="frame" x="55.5" y="215" width="160" height="148.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperCoversRock" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-Pd-JjO" userLabel="Result Image View">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperCoversRock" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-Pd-JjO" userLabel="Result Image View">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="AIa-oL-2Rs"/>

@@ -15,4 +15,5 @@ class MatchHistoryTableViewCell: UITableViewCell {
     @IBOutlet var resultTitle: UILabel!
     @IBOutlet var playerMoveImageView: UIImageView!
     @IBOutlet var opponentMoveImageView: UIImageView!
+    @IBOutlet var resultDate: UILabel!
 }

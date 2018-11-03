@@ -58,6 +58,11 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
         cell.playerMoveImageView.image = match.playerMove.image
         cell.opponentMoveImageView.image = match.opponentMove.image
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+        
+        cell.resultDate.text = "Played at: \(dateFormatter.string(from: match.date))"
+        
         return cell
     }
 }
