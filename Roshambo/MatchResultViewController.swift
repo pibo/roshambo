@@ -43,7 +43,7 @@ class MatchResultViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func playAgain(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: Life Cycle Methods

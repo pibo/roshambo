@@ -31,7 +31,7 @@ class NewMatchViewController: UIViewController {
             
             let controller = storyboard?.instantiateViewController(withIdentifier: "MatchResultViewController") as! MatchResultViewController
             controller.match = match
-            present(controller, animated: true, completion: nil)
+            navigationController?.pushViewController(controller, animated: true)
             
         case paperButton:
             match = Match(playerMove: .paper)

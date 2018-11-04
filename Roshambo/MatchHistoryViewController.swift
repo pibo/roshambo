@@ -18,12 +18,18 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet var emptyState: UIStackView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var customNavigationItem: UINavigationItem!
     
     // MARK: Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Show the matches in reverse order.
         history = history.reversed()
+        
+        // Add the OK button.
+        customNavigationItem.rightBarButtonItem = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(dismiss(_:)))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +41,7 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
     
     // MARK: Actions
     
-    @IBAction func dismiss(_ sender: Any) {
+    @objc func dismiss(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     

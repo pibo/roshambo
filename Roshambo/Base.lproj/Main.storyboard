@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="721-w2-c67">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Match View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="HKJ-eO-j99">
+            <objects>
+                <navigationController id="721-w2-c67" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ARf-en-7Ow">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XZz-fs-8oJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXd-OO-EO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-873" y="34"/>
+        </scene>
+        <!--Roshambo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NewMatchViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,38 +35,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="3ly-oD-GeV" userLabel="Wrapper">
-                                <rect key="frame" x="37.5" y="214.5" width="300" height="238.5"/>
+                                <rect key="frame" x="37.5" y="233.5" width="300" height="200"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zE6-wO-6fc" userLabel="Description">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="79.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roshambo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdK-GW-Bmv">
-                                                <rect key="frame" x="72.5" y="0.0" width="155.5" height="38.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="64"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap one of the buttons below to play against your opponent!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjR-oI-XUa">
-                                                <rect key="frame" x="0.0" y="38.5" width="300" height="41"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="wex-IY-Ck8">
-                                                        <variation key="heightClass=regular-widthClass=regular" constant="600"/>
-                                                    </constraint>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                                </variation>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap one of the buttons below to play against your opponent!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjR-oI-XUa">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="wex-IY-Ck8">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        </variation>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DMT-7e-me8" userLabel="Moves">
-                                        <rect key="frame" x="21.5" y="111.5" width="257" height="65"/>
+                                        <rect key="frame" x="21.5" y="73" width="257" height="65"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O19-tp-pFf" userLabel="Rock Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="65"/>
@@ -98,13 +100,13 @@
                                                 <state key="normal" image="scissors"/>
                                                 <connections>
                                                     <action selector="chooseMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpd-rP-LfH"/>
-                                                    <segue destination="DaY-lc-yyN" kind="presentation" identifier="goToMatchResult" id="3Gk-Hf-j4a"/>
+                                                    <segue destination="DaY-lc-yyN" kind="show" identifier="goToMatchResult" id="bGK-hW-l0a"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyM-TM-ph4">
-                                        <rect key="frame" x="102" y="208.5" width="96" height="30"/>
+                                        <rect key="frame" x="102" y="170" width="96" height="30"/>
                                         <state key="normal" title="Match History"/>
                                         <connections>
                                             <segue destination="COE-1O-TEd" kind="presentation" identifier="goToMatchHistory" id="JEj-xv-lNj"/>
@@ -120,6 +122,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Roshambo" largeTitleDisplayMode="always" id="W20-RB-9GZ"/>
                     <connections>
                         <outlet property="paperButton" destination="etz-bI-hBR" id="Ulw-dN-286"/>
                         <outlet property="rockButton" destination="O19-tp-pFf" id="00e-tp-I7P"/>
@@ -255,48 +258,24 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8n-qe-uQj">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFD-Z0-LoO">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="80O-Y5-5QV"/>
+                                    <constraint firstAttribute="height" constant="44" id="txZ-sK-El8"/>
                                 </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <barButtonItem systemItem="flexibleSpace" id="h1t-Z5-fcx"/>
-                                    <barButtonItem style="plain" id="VqO-3n-Dyd" userLabel="Label Container">
-                                        <view key="customView" contentMode="scaleToFill" id="UGN-SM-j0U">
-                                            <rect key="frame" x="72" y="5.5" width="231" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98I-OS-6Ja">
-                                                    <rect key="frame" x="59" y="6" width="113" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="98I-OS-6Ja" firstAttribute="centerY" secondItem="UGN-SM-j0U" secondAttribute="centerY" id="eMC-10-cg9"/>
-                                                <constraint firstItem="98I-OS-6Ja" firstAttribute="centerX" secondItem="UGN-SM-j0U" secondAttribute="centerX" id="ouC-9b-8dd"/>
-                                            </constraints>
-                                        </view>
-                                    </barButtonItem>
-                                    <barButtonItem systemItem="flexibleSpace" id="kzY-vI-nzB"/>
-                                    <barButtonItem title="OK" id="Ic9-IO-4y0">
-                                        <connections>
-                                            <action selector="dismiss:" destination="COE-1O-TEd" id="fr5-7h-HUW"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <navigationItem title="Match History" id="f7C-At-wDO"/>
                                 </items>
-                            </toolbar>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="n8n-qe-uQj" firstAttribute="leading" secondItem="Qom-bN-Qy4" secondAttribute="leading" id="6iU-RD-UHD"/>
-                            <constraint firstItem="n8n-qe-uQj" firstAttribute="top" secondItem="Qom-bN-Qy4" secondAttribute="top" id="Jbx-yD-WRI"/>
+                            <constraint firstItem="J2W-vV-ekL" firstAttribute="top" secondItem="yFD-Z0-LoO" secondAttribute="bottom" id="2RX-v3-eG9"/>
                             <constraint firstItem="J2W-vV-ekL" firstAttribute="leading" secondItem="Qom-bN-Qy4" secondAttribute="leading" id="OfG-hU-WuU"/>
-                            <constraint firstItem="J2W-vV-ekL" firstAttribute="top" secondItem="n8n-qe-uQj" secondAttribute="bottom" id="SKN-Ot-OYW"/>
-                            <constraint firstItem="n8n-qe-uQj" firstAttribute="trailing" secondItem="Qom-bN-Qy4" secondAttribute="trailing" id="WwW-N4-4ae"/>
+                            <constraint firstItem="yFD-Z0-LoO" firstAttribute="leading" secondItem="Qom-bN-Qy4" secondAttribute="leading" id="Qnn-G1-LXe"/>
+                            <constraint firstItem="yFD-Z0-LoO" firstAttribute="top" secondItem="Qom-bN-Qy4" secondAttribute="top" id="Ugx-wr-IbI"/>
+                            <constraint firstItem="yFD-Z0-LoO" firstAttribute="trailing" secondItem="Qom-bN-Qy4" secondAttribute="trailing" id="WLw-Rz-QWE"/>
                             <constraint firstItem="2qy-mM-MsU" firstAttribute="centerY" secondItem="J2W-vV-ekL" secondAttribute="centerY" id="cfv-LX-dcd"/>
                             <constraint firstItem="Qom-bN-Qy4" firstAttribute="bottom" secondItem="J2W-vV-ekL" secondAttribute="bottom" id="mjg-9j-TOg"/>
                             <constraint firstItem="Qom-bN-Qy4" firstAttribute="trailing" secondItem="J2W-vV-ekL" secondAttribute="trailing" id="pe1-cD-gLG"/>
@@ -305,6 +284,7 @@
                         <viewLayoutGuide key="safeArea" id="Qom-bN-Qy4"/>
                     </view>
                     <connections>
+                        <outlet property="customNavigationItem" destination="f7C-At-wDO" id="lSK-Ni-ORC"/>
                         <outlet property="emptyState" destination="2qy-mM-MsU" id="cOJ-vH-rMs"/>
                         <outlet property="tableView" destination="J2W-vV-ekL" id="Qw7-Bh-Ssx"/>
                     </connections>
